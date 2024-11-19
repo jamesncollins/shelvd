@@ -7,6 +7,7 @@ export default [
   {
     files: ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
   },
+  { parser: "@typescript-eslint/parser" },
   {
     rules: {
       "import/extensions": [

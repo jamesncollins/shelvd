@@ -1,18 +1,26 @@
 import express from "express";
+import cors from "cors";
 import fs from "fs";
+
+const loadBooks = () => {
+  const data = fs.readFileSync("mockData.json", "utf-8");
+  return JSON.parse(data);
+};
+
+const saveBooks = (books) => {
+  fs.writeFileSync("mockData.json", JSON.stringify(books, null, 2), "utf-8");
+};
 
 export default function Server() {
   const app = express();
+
+  app.use(
+    cors({
+      origin: "http://localhost:3001", // Only allow requests from this origin
+    })
+  );
+
   app.use(express.json());
-
-  const loadBooks = () => {
-    const data = fs.readFileSync("mockData.json", "utf-8");
-    return JSON.parse(data);
-  };
-
-  const saveBooks = (books) => {
-    fs.writeFileSync("mockData.json", JSON.stringify(books, null, 2), "utf-8");
-  };
 
   app.get("/books", (req, res) => {
     res.json(loadBooks());
