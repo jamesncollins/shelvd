@@ -10,6 +10,7 @@ export default function BookList(): ReactElement {
       try {
         const response = await fetch("http://localhost:3000/books");
         const data = await response.json();
+        console.log(data[0]);
         setBooks(data);
       } catch (error) {
         console.error("error fetching books", error);
@@ -18,17 +19,19 @@ export default function BookList(): ReactElement {
   }, []);
 
   return (
-    <div className="book-container">
+    <div className="book-wrapper">
       <h2>Book List</h2>
       <div className="book-list">
-        {books.map((book) => (
-          <li key={book.id} className="book-item">
-            <h3>{book.title}</h3>
-            <p>{book.author}</p>
-            <p>{book.description}</p>
-            <p>{book.yearPublished}</p>
-          </li>
-        ))}
+        {books
+          .filter((_, i) => i < 3)
+          .map((book) => (
+            <li key={book.id} className="book-item">
+              <h3>{book.title}</h3>
+
+              <p>{book.author}</p>
+              <p>{book.yearPublished}</p>
+            </li>
+          ))}
       </div>
     </div>
   );
