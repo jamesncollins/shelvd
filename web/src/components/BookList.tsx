@@ -18,16 +18,18 @@ export default function BookList(): ReactElement {
   }, []);
 
   return (
-    <div className="book-list">
+    <div className="book-container">
       <h2>Book List</h2>
-      {books.map((book) => (
-        <li key={book.id} className="book-item">
-          <h3>{book.title}</h3>
-          <p>Author: {book.author}</p>
-          <p>{book.description}</p>
-          <p>Published: {book.yearPublished}</p>
-        </li>
-      ))}
+      <div className="book-list">
+        {books.map((book) => (
+          <li key={book.id} className="book-item">
+            <h3>{book.title}</h3>
+            <p>{book.author}</p>
+            <p>{book.description}</p>
+            <p>{book.yearPublished}</p>
+          </li>
+        ))}
+      </div>
     </div>
   );
 }

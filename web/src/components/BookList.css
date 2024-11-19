@@ -1,19 +1,28 @@
-.book-list {
+.book-container {
   padding: 20px;
-  max-width: 600px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-.book-list h2 {
+.book-container h2 {
   text-align: center;
   font-size: 1.8rem;
 }
 
+.book-list {
+  background-color: orange;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
 .book-item {
   background-color: #f9f9f9;
-  margin-bottom: 15px;
   padding: 0 15px 15px 15px;
   border-radius: 8px;
+  width: 200px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
