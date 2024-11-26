@@ -1,6 +1,12 @@
 # Shelvd
 
-To run the app, run `npm start` in the root directory.
+If you open `web/src/components` you can find some examples of frontend components.
+
+- `TicTacToe`: a game of tic tac toe.
+
+## Web app
+
+To run the full stack app, run `npm start` in the root directory.
 
 On `localhost:3000` you can send the following requests:
 
