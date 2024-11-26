@@ -1,13 +1,13 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import BookList from "./components/BookList";
+// import BookList from "./components/BookList/BookList";
+import TicTacToe from "./components/TicTacToe/TicTacToe";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <BookList />
+        <TicTacToe />
+        {/* <BookList /> */}
       </header>
     </div>
   );

@@ -1,0 +1,14 @@
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3da65;
+  width: 5rem;
+  height: 5rem;
+}
+
+.label {
+  font-size: 60px;
+  color: #f34355;
+  font-family: Arial;
+}

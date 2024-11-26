@@ -1,0 +1,17 @@
+.board-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.status-text {
+  font-size: 60px;
+  color: #fff9db;
+  font-family: Arial;
+}

@@ -1,6 +1,6 @@
 import { ReactElement, useState, useEffect } from "react";
-import { Book } from "../types/Book";
 import "./BookList.css";
+import { Book } from "../../types/Book";
 
 export default function BookList(): ReactElement {
   const [books, setBooks] = useState<Book[]>([]);
